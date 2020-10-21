@@ -1,0 +1,22 @@
+-   컨테이너 실행
+    -   docker run [ImageName] [CMD]
+-   컨테이너 나열
+    -   docker ps
+    -   출력 ex
+        -   CONTAINER ID : 컨테이너 고유 아이디 hash값 일부분만 표출
+        -   IMAGE : 컨테이너 생성시 사용한 도커 이미지
+        -   COMMAND : 컨테이너 시작시 실행될 명령어
+            -   대부분 이미지에 내장되어 있으므로 별도 설정 할 필요 없음
+        -   CREATED : 컨테이너 생성 시간
+        -   STATUS : 컨테이너 상태
+            -   Up 실행중
+            -   Exited 종료
+            -   Pause 일시정지
+        -   PORTS : 컨테이너가 개방한 포트와 호스트에 연결한 포트 특별한 설정하지 않을시 출력되지 않음
+        -   NAMES : 컨테이너 고유 이름 컨테이너 생성시 --name 옵션으로 설정가능
+            -   설정하지 않을시 도커 엔진이 임의로 형용사와 명사를 조합해서 설정함 중복 불가능.
+            -   rename으로 재설정 가능
+    -   docker ps -a
+        -   실행되지 않은 컨테이너도 모두 보여줌
+    -   docker ps --format 'tables{{.Names}}
+        -   NAMES 값만 출력
