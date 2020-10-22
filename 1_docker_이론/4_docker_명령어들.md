@@ -1,5 +1,7 @@
 -   컨테이너 실행
     -   docker run [ImageName] [CMD]
+    -   docker run -lt [ImageName] : 중지되지 않고 cmd환경 이용
+    -   docker run -p [외부 사용할 포트]:[컨테이너 내부포트] [ImageName] : 포트 설정 해줘야함.
 -   컨테이너 나열
 
     -   docker ps
